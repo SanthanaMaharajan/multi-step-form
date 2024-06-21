@@ -1,0 +1,415 @@
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.app{
+  background-color: hsl(210, 4%, 90%);
+  height: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.form-container{
+  width: 60%;
+  margin: auto;
+  border-radius: 15px;
+  height: 90vh;
+}
+.side-nav{
+  background-image: url(../public/assets/images/bg-sidebar-desktop.svg);
+  background-size:contain ;
+  background-repeat: no-repeat;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+}
+.form-body{
+  background-color: hsl(0, 0%, 100%);
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 15px;
+  padding: 15px;
+  height: 100%;
+  position: relative;
+}
+.step-container{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 20px;
+}
+.step-count{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 35px;
+  font-size: 16px;
+  color: hsl(0, 0%, 100%);
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 100%);
+  font-weight: 400;
+}
+.step-count.active{
+  background-color: hsl(228, 100%, 84%);
+  color: #000;
+  font-size: 14px;
+}
+.step-name{
+  color: #e9e9e9a6;
+  display: block;
+  font-size: 14px;
+}
+.step-details{
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
+  font-size: 16px;
+}
+.form-field{
+  padding: 30px 50px;
+  font-family: "Ubuntu", sans-serif;
+  text-align: left;
+}
+.form-head{
+  font-weight: 700;
+}
+.form-subhead{
+  color: #aaa;
+  font-size: 14px;
+  font-weight: 500; 
+  margin-bottom: 20px;
+}
+.form-inputsec{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 5px;
+  margin: 20px 0;
+}
+.form-inputsec p{
+  position: absolute;
+  right: 0;
+  color: rgb(252, 16, 16);
+  font-family: "Ubuntu", sans-serif; 
+}
+.form-inputsec label{
+  font-weight: 500;
+}
+.form-inputsec input{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  /* outline: 1px solid hsl(213, 96%, 18%); */
+  border-radius: 5px;
+}
+.form-field button{
+  border: none;
+  background-color: hsl(213, 96%, 18%);
+  color: hsl(0, 0%, 100%);
+  padding: 10px 20px;
+  border-radius: 5px;
+  float: right;
+  font-size: 14px;
+  margin-top: 60px;
+}
+.plan-card-sec{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+.plan-card{
+  width: 30%;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.plan-card:hover{
+  border: 1px solid hsl(243, 100%, 62%); 
+}
+.plan-card.active{
+  border: 1px solid hsl(243, 100%, 62%);
+}
+.plan-det-sec{
+  margin-top: 45px;
+}
+.plan-card p{
+  padding: 0;
+  margin: 0;
+}
+.plan-title{
+  font-size: 14px;
+  font-weight: 700;
+  color: hsl(213, 96%, 18%);
+}
+.plan-price{
+  font-size: 12px;
+  color: #929292;
+}
+.freebie{
+  font-size: 12px;
+  color: hsl(213, 96%, 18%);
+  font-weight: 700;
+}
+
+section {
+  flex: 0 0 120px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+.blur{
+  color: #aaa;
+}
+.selected{
+  color: hsl(213, 96%, 18%);
+  font-weight: 500;
+}
+
+.switch {
+  display: inline-block;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch label {
+  display: block;
+  width: 35px;
+  height: 20px;
+  padding: 3px;
+  border-radius: 15px;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: hsl(213, 96%, 18%);
+}
+
+.switch label::after {
+  content: "";
+  display: inherit;
+  width: 10px;
+  height: 10px;
+  border-radius: 12px;
+  background: #ffffff;
+  transition: 0.3s;
+}
+
+.switch input:checked ~ label {
+  border-color: #ffffff;
+}
+
+.switch input:checked ~ label::after {
+  translate: 15px 0;
+  background: #ffffff;
+}
+
+.switch input:disabled ~ label {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.next-btn{
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+.back-btn{
+  position: absolute;
+  bottom: 10%;
+  background: none !important;
+  color: #919090 !important;
+  font-weight: 500;
+}
+.back-btn:hover{
+  color:#000 !important;
+}
+.addon-cont{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 15px 0;
+  padding: 15px;
+  text-align: left;
+}
+
+.addon-cont:hover{
+  border: 1px solid hsl(243, 100%, 62%);
+}
+.addon-cont.active{
+  border:1px solid hsl(243, 100%, 62%);
+}
+.addon-cont div:nth-child(2){
+  width:50%;
+}
+.pricing{
+  color: hsl(243, 100%, 62%);
+  font-size: 14px;
+}
+.addon-cont input{
+  border: 1px solid #ccc;
+  outline-color: #ccc;
+}
+.addon-cont p{
+  margin: 0;
+  padding: 0;
+}
+.cnfrm-btn{
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  background-color: hsl(243, 100%, 62%) !important;
+}
+.final-field{
+  margin: 30px;
+}
+.plan-cont{
+  display: flex;
+  justify-content: space-between;
+}
+.bill-cont{
+  background-color: #f0efef;
+  padding: 20px;
+  border-radius: 15px;
+}
+.final-cont{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+p{
+  margin: 0;
+  padding: 0;
+}
+.change-btn{
+  text-decoration: underline;
+  font-size: 12px;
+  color: #929292;
+}
+.final-price{
+  color: hsl(243, 100%, 62%);
+  font-size: 15px;
+  font-weight: 700;
+}
+.thanks-cont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px; 
+  margin-top: 50px;
+}
+.thanks-cont h1{
+  padding: 20px 0;
+}
+.thanks-cont p{
+  color: #929292;
+  padding: 0 10px ;
+}
+.topNav{
+  background-image: url(../public/assets/images/bg-sidebar-mobile.svg);
+  background-size: cover;
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  display: none;
+}
+@media only screen and (max-width: 768px){
+  .side-nav{
+    display: none;
+  }
+  .form-container{
+   width: 85%;
+   transform: translateY(-50px);
+   height: 100%;
+  }
+  .form-body{
+    padding: 5px;
+    padding-bottom: 10px;
+  }
+  .app{
+    padding: 0;
+  }
+  .plan-card-sec{
+    flex-wrap: wrap;
+  }
+  .plan-card{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .plan-det-sec{
+    margin: 0;
+  }
+  .next-btn{
+    position: static;
+    float: right;
+  }
+  .back-btn{
+    position: static;
+    float: left;
+  }
+  .cnfrm-btn{
+    position: static;
+    float: right;
+  }
+  .topNav{
+    display: flex;
+  }
+  .final-field{
+    margin: 0px;
+  }
+  .form-inputsec p{
+    position: relative;
+    
+    color: rgb(252, 16, 16);
+    font-family: "Ubuntu", sans-serif; 
+  }
+}
+@media only screen and (min-width: 768px){
+  .side-nav{
+    display: block;
+  }
+  .form-container{
+   width: 60%;
+   /* transform: translateY(-50px); */
+  }
+  .form-body{
+    padding: 15px;
+    /* padding-bottom: 10px; */
+  }
+  .app{
+    padding-top: 30px;
+  }
+  /* .plan-card-sec{ */
+    /* flex-wrap: wrap; */
+  /* } */
+  .plan-card{
+    display: block;    
+  }
+  .plan-det-sec{
+    margin-top: 45px;
+  }
+  .next-btn{
+    position: absolute;
+    /* float: right; */
+  }
+  .back-btn{
+    position: absolute;
+    /* float: left; */
+  }
+  .topNav{
+    display: none;
+  }
+}
